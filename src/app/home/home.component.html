@@ -1,0 +1,17 @@
+<p>home works!</p>
+
+
+<div class="main">
+    <div class="card" style="width: 18rem;" *ngFor="let hotelById of hotelById ">
+        <img src="{{hotelById.images}}" class="card-img-top" alt="...">
+        <div class="hotelsCard">
+          <h5 class="card-title">{{hotelById.id}}</h5>
+          <p class="card-text">{{hotelById.hotelId}}</p>
+          <p class="card-text">{{hotelById.maximumGuests}}</p>
+          <p class="card-text">{{hotelById.name}}</p>
+          <p class="card-text">{{hotelById.pricePerNight}}</p>
+          <p class="card-text">{{hotelById.roomTypeId}}</p>
+          <a href="#" class="btn btn-primary">Go</a>
+        </div>
+      </div>
+</div>

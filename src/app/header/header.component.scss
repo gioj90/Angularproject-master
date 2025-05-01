@@ -1,0 +1,21 @@
+
+
+.active {
+    color: red;
+    background-color: black;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+    font-size: 30px;
+}

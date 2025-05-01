@@ -1,0 +1,15 @@
+
+
+<div class="main">
+    <div class="card" style="width: 18rem;" *ngFor="let hotel of hotelsArr ">
+        <img src="{{hotel.featuredImage}}" class="card-img-top" alt="...">
+        <div class="hotelsCard">
+          <h5 class="card-title">{{hotel.name}}</h5>
+          <p class="card-text">{{hotel.city}}</p>
+          <p class="card-text">{{hotel.address}}</p>
+          <!-- <p class="card-text">{{hotel.id}}</p> -->
+          <a routerLink="/details/{{hotel.id}}" class="btn btn-primary">Go </a>
+        </div>
+      </div>
+</div>
+

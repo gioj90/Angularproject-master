@@ -1,0 +1,10 @@
+<p>details works!</p>
+<div class="card" style="width: 18rem;" *NgFor="let hotel of singleHotel ">
+    <img src="{{singleHotel.featuredImage}}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="{{singleHotel.name}}">Card title</h5>
+      <p class="card-text">{{singleHotel.city}}</p>
+      <p class="card-text">{{singleHotel.address}}</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>
