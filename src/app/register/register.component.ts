@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
+
 @Component({
   selector: 'app-register',
   imports: [RouterModule],
@@ -8,5 +9,6 @@ import { RouterModule } from '@angular/router';
   styleUrl: './register.component.scss'
 })
 export class RegisterComponent {
+
 
 }

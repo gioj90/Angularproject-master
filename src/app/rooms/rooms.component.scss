@@ -1,4 +1,11 @@
 
+main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 
 .main {
     display: flex;
@@ -6,11 +13,84 @@
     align-items: center;
     flex-wrap: wrap;
     padding-top: 15px;
+    gap: 10px;
 }
 
 .filterBox {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 5px;
+    height: 130px;
+    background-color: #F5F5F5;
 }
+
+.butt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.filterBox button {
+    border-radius: 5px;
+    background-color: aqua;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: purple;
+    font-size: bold;
+    border: none;
+    margin-left: 20px;
+    width: 100px;
+    height: 30px;
+}
+
+.input {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: 10px;
+    flex-direction: column;
+}
+.input2 {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: 10px;
+    flex-direction: column;
+}
+.input3 {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: 10px;
+    flex-direction: column;
+}
+.input4 {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: 10px;
+    flex-direction: column;
+}
+.ipnut5 {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: 10px;
+    flex-direction: column;
+}
+
+.filterBox select {
+    margin-top: 32px;
+}
+
+.selectRoom {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    padding-top: 5px;
+}
+

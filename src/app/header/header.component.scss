@@ -1,4 +1,14 @@
 
+.navcont{
+    position: fixed;
+    background-color: rgb(95, 194, 228);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+    width: 100%;
+    box-shadow: 2cm;
+}
 
 .active {
     color: red;
@@ -9,6 +19,7 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-top: 30px;
 }
 
 nav ul {
@@ -18,4 +29,11 @@ nav ul {
     gap: 20px;
     list-style: none;
     font-size: 30px;
+}
+
+nav ul a {
+    list-style-type: none;
+    text-decoration: none;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(156, 125, 86);
 }

@@ -11,21 +11,6 @@ import { RouterModule } from '@angular/router';
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
-  constructor(private api: HotelService){}
-
-  hotelById : HotelId[] = []
-
-  // ngOnInit(){
-  //   this.api.getHotels().subscribe((resp : any) =>{
-  //     console.log(resp)
-  //     this.hotelById = resp
-  //     this.displayHotlId(resp)
-
-  //   })
-
-  //   displayHotlId(arr : HotelId[]){
-  //     this.hotelById = arr
-  //   }
 
   }
 
