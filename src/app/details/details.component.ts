@@ -2,11 +2,10 @@ import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { HotelService } from '../Servises/hotel.service';
 import { Hotels } from '../Models/hotels';
-import { FormsModule } from '@angular/forms';
-
+import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-details',
-  imports: [FormsModule],
+  imports: [CommonModule],
   templateUrl: './details.component.html',
   styleUrl: './details.component.scss'
 })
@@ -24,6 +23,7 @@ export class DetailsComponent {
   this.api.getHotelById(id).subscribe((resp:any) => {
     console.log(resp)
     this.singleHotel = resp
+    console.log(this.singleHotel)
   })
  }
 

@@ -1,4 +1,5 @@
 import { HttpClient } from '@angular/common/http';
+import { UrlCodec } from '@angular/common/upgrade';
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -16,5 +17,8 @@ export class ApiService {
     return this.http.get(url)
   }
 
+  delete(url : string){
+    return this.http.delete(url)
+  }
 
 }

@@ -1,3 +1,4 @@
+import { Rooms } from "./rooms";
 
 
 export class Hotels {
@@ -6,6 +7,7 @@ export class Hotels {
     city?:string;
     address?:string;
     featuredImage?:string;
+    rooms?: Rooms[]
 }
 
 export class HotelId {
@@ -19,6 +21,8 @@ export class HotelId {
     bookedDates?: null;
     images?: string
 }
+
+
 
 // "id": 1,
 // "name": "Premium Room",

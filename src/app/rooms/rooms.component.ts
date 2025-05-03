@@ -3,10 +3,11 @@ import { RoomsService } from '../Servises/rooms.service';
 import { Rooms } from '../Models/rooms';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-rooms',
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, RouterModule],
   templateUrl: './rooms.component.html',
   styleUrl: './rooms.component.scss'
 })
@@ -47,16 +48,19 @@ export class RoomsComponent {
   }
 
   reset(){
-    this.api.reset({
-    this.roomType = "",
-    this.priceFrom = "",
-    this.priceTo = "",
-    this.maxGUest = "",
-    this.chekInDate = "",
-    this.chekOutDate = "",
+    this.roomType = 0,
+    this.priceFrom = 0,
+    this.priceTo = 0,
+    this.maxGUest = 1,
+    this.chekInDate = new Date,
+    this.chekOutDate = new Date
+    this.api.getAllRooms().subscribe((resp : any) => {
+      console.log(resp)
+      this.roomsArr = resp
+      console.log(this.roomsArr)
     })
   }
-
+  
 
 
 }

@@ -20,4 +20,13 @@ export class RoomsService {
     return this.api.postApi('https://hotelbooking.stepprojects.ge/api/Rooms/GetFiltered', obj)
   }
 
+  booking(obj : any){
+    return this.api.postApi('https://hotelbooking.stepprojects.ge/api/Booking', obj)
+
+  }
+
+  deleteBooking(id: number){
+    return this.api.delete(`https://hotelbooking.stepprojects.ge/api/Booking/${id}`)
+  }
+
 }

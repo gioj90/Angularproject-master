@@ -15,6 +15,20 @@ export class HomeComponent {
 
   hotelById : HotelId[] = []
 
+  // ngOnInit(){
+  //   this.api.getHotels().subscribe((resp : any) =>{
+  //     console.log(resp)
+  //     this.hotelById = resp
+  //     this.displayHotlId(resp)
+
+  //   })
+
+  //   displayHotlId(arr : HotelId[]){
+  //     this.hotelById = arr
+  //   }
+
+  }
 
 
-}
+
+

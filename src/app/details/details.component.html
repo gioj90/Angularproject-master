@@ -1,10 +1,42 @@
-<p>details works!</p>
-<div class="card" style="width: 18rem;" *NgFor="let hotel of singleHotel ">
-    <img src="{{singleHotel.featuredImage}}" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="{{singleHotel.name}}">Card title</h5>
-      <p class="card-text">{{singleHotel.city}}</p>
-      <p class="card-text">{{singleHotel.address}}</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
+
+
+<div class="main">
+    <div class="card" style="width: 18rem;" >
+        <img src="{{singleHotel.featuredImage}}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="{{singleHotel.name}}">Card title</h5>
+          <p class="card-text">{{singleHotel.city}}</p>
+          <p class="card-text">{{singleHotel.address}}</p>
+          <a href="#" class="btn btn-primary">See rooms</a>
+        </div>
+      </div>
+</div>
+
+<div class="main">
+    <div class="card" style="width: 18rem;" *ngFor="let room of singleHotel.rooms">
+        <div id="carouselExample-{{room.id}}" class="carousel slide">
+            <div class="carousel-inner">
+              <div class="carousel-item" *ngFor="let image of room.images; let i = index" [class.active]="i === 0">
+                <img [src]="image.source" class="d-block w-100" alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" [attr.data-bs-target]="'#carouselExample-' + room.id" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" [attr.data-bs-target]="'#carouselExample-' + room.id" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+       
+        <div class="hotelsCard">
+          <h5 class="card-title">{{room.id}}</h5>
+          <p class="card-text">{{room.hotelId}}</p>
+          <p class="card-text">{{room.name}}</p>
+          <p class="card-text">{{room.pricePerNight}}</p>
+          <p class="card-text">{{room.maximumGuests}}</p>
+          <a href="#" class="btn btn-primary">book</a>
+        </div>
     </div>
   </div>

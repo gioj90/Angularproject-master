@@ -1,10 +1,12 @@
 
 <div class="filterBox">
     <select name="" id="" [(ngModel)]="roomType">
+        <option value="0">Select room</option>
         <option value="1">Single room</option>
         <option value="2">Delux room</option>
         <option value="3">Premium room</option>
     </select>
+    
     <input type="number" name="" id="" placeholder="priceFrom" [(ngModel)]="priceFrom">
     <input type="number" name="" id="" placeholder="priceto"[(ngModel)]="priceTo">
     <input type="number" name="" id="" placeholder="maxGuest" [(ngModel)]="maxGUest">
@@ -16,25 +18,25 @@
 
 
 
-
+<!-- 
 <div class="main">
     <div class="card" style="width: 18rem;" *ngFor="let room of roomsArr ">
-        <div id="carouselExample" class="carousel slide" *ngFor="let room of roomsArr ">
+        <div id="carouselExample-{{room.id}}" class="carousel slide" >
             <div class="carousel-inner">
-              <div class="carousel-item active" *ngFor="let imige of room.images">
+              <div class="carousel-item" *ngFor="let imige of room.images; let i = index" [class.active]="i === 0">
                 <img src="{{imige.source}}" class="d-block w-100" alt="...">
               </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <button class="carousel-control-prev" type="button" data-bs-target="'#carouselExample-' + room.id" data-bs-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
               <span class="visually-hidden">Previous</span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <button class="carousel-control-next" type="button" [attr.data-bs-target]="'#carouselExample-' + room.id" data-bs-slide="next">
               <span class="carousel-control-next-icon" aria-hidden="true"></span>
               <span class="visually-hidden">Next</span>
             </button>
           </div>
-        <!-- <img src="{{imige.source}}" class="card-img-top" alt="..." *ngFor="let imige of room.images"> -->
+        <img src="{{imige.source}}" class="card-img-top" alt="..." *ngFor="let imige of room.images">
         <div class="hotelsCard">
           <h5 class="card-title">{{room.id}}</h5>
           <p class="card-text">{{room.hotelId}}</p>
@@ -44,5 +46,33 @@
           <a href="#" class="btn btn-primary">book</a>
         </div>
       </div>
-</div>
+</div> -->
 
+<div class="main">
+    <div class="card" style="width: 18rem;" *ngFor="let room of roomsArr">
+        <div id="carouselExample-{{room.id}}" class="carousel slide">
+            <div class="carousel-inner">
+              <div class="carousel-item" *ngFor="let image of room.images; let i = index" [class.active]="i === 0">
+                <img [src]="image.source" class="d-block w-100" alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" [attr.data-bs-target]="'#carouselExample-' + room.id" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" [attr.data-bs-target]="'#carouselExample-' + room.id" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+       
+        <div class="hotelsCard">
+          <h5 class="card-title">{{room.id}}</h5>
+          <p class="card-text">{{room.hotelId}}</p>
+          <p class="card-text">{{room.name}}</p>
+          <p class="card-text">{{room.pricePerNight}}</p>
+          <p class="card-text">{{room.maximumGuests}}</p>
+          <a routerLink="/booking-page/{{room.id}}" class="btn btn-primary">book</a>
+        </div>
+    </div>
+  </div>
